@@ -1,0 +1,26 @@
+right_buttons{
+  position: absolute;
+  left: 575px;
+  top: 50px;  
+
+}
+
+date_time_css{
+  font-size: x-large;
+}
+
+time_label_css{
+  font-size: large;
+}
+
+
+block{
+  display: block;
+  white-space: nowrap;
+  
+}
+
+time_buttons{
+    position: absolute;
+    top: 80px; 
+}
