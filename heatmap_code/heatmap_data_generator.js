@@ -7,7 +7,7 @@ const { URL } = require('url'); //Provides utilities for URL resolution and pars
 var http = require('http');
 
 // Connection URL for "iotegg" MongoDB database
-var mongodb_url = 'mongodb://lwm2mDataGuest:1cs-us3r.2016@131.227.92.236:27017/iotegg';
+var mongodb_url = 'mongodb://USER_NAME:PASSWORD@131.227.92.236:27017/iotegg'; //CHANGE USER_NAME and PASSWORD to access database
 
 //Egg variables (note that gps_index does not match egg_number - the gps data array
 //will only have data for eggs that exist i.e. not for IoTEgg006, as it doesn't exist)
