@@ -150,11 +150,21 @@ function mongoDB_connect()
 {
     MongoClient.connect(mongodb_url, function(err, db) 
     {
-        assert.equal(null, err); //err == null if there's no error; AssertionError message displayed otherwise 
-        console.log("Connected successfully to IoTEggs server\n"); //prints to stdout
+        //Failed to connect to server - try again in 1 minute 
+        if(err != null)
+        {
+            console.log("Failed to connect to IoTEggs server - re-try in 1 minute\n");
+            hour_offset = 0;
+            setTimeout(setTime, 60000); //Call the setTime function after 1 minute has passed (60000ms) 
+        }
+            
+        else
+        {
+            console.log("Connected successfully to IoTEggs server\n"); //prints to stdout
   
-        findDocuments(db);
-    
+            findDocuments(db);
+        }
+        
     });
 }
 
